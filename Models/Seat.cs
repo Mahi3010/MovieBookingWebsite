@@ -8,7 +8,7 @@ namespace MovieBookingApp.Models
     {
         public int Id { get; set; } //PK
         public int ScreentId { get; set; } //FK
-        public string SeatNumber { get; set; }
+        public string SeatNumber { get; set; } = string.Empty;
         public string SeatType = "Regular"; //VIP
 
         public Screen? Screen { get; set; }

@@ -156,3 +156,9 @@ D:\Coding\MovieBookingAPI\MovieBookingAPI\obj\Debug\net10.0\refint\MovieBookingA
 D:\Coding\MovieBookingAPI\MovieBookingAPI\obj\Debug\net10.0\MovieBookingAPI.pdb
 D:\Coding\MovieBookingAPI\MovieBookingAPI\obj\Debug\net10.0\MovieBookingAPI.genruntimeconfig.cache
 D:\Coding\MovieBookingAPI\MovieBookingAPI\obj\Debug\net10.0\ref\MovieBookingAPI.dll
+D:\Coding\MovieBookingAPI\MovieBookingAPI\obj\Debug\net10.0\MovieBookingAPI.sourcelink.json
+D:\Coding\MovieBookingAPI\MovieBookingAPI\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Coding\MovieBookingAPI\MovieBookingAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Coding\MovieBookingAPI\MovieBookingAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Coding\MovieBookingAPI\MovieBookingAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Coding\MovieBookingAPI\MovieBookingAPI\bin\Debug\net10.0\BCrypt-Net-Next.dll

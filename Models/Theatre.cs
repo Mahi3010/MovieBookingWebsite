@@ -9,8 +9,8 @@ namespace MovieBookingApp.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        public string Location { get; set; }
+        public string Name { get; set; } = null!;
+        public string Location { get; set; } = null!;
 
         public ICollection<Screen>? Screens { get; set; }
     }

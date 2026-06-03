@@ -9,13 +9,13 @@ namespace MovieBookingApp.Models
     {
         public int Id { get; set; } // primary key
         [Required]
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
-        public int Duration { get; set; }
+        public int Duration { get; set; } 
         public string Language { get; set; } = string.Empty;
-        public string Genre { get; set; }
+        public string Genre { get; set; } = String.Empty;
         public DateTime ReleaseDate { get; set; }
 
         public string? PosterUrl { get; set; }

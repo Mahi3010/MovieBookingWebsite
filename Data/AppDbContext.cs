@@ -10,20 +10,20 @@ namespace MovieBookingAPI.Data
         {
         }
 
-        public DbSet<User> Users { get; set; } = null;
+        public DbSet<User> Users { get; set; } = null!;
 
-        public DbSet<Movie> Movies { get; set; } = null;
+        public DbSet<Movie> Movies { get; set; } = null!;
 
-        public DbSet<Theatre> Theatres { get; set; }
+        public DbSet<Theatre> Theatres { get; set; } = null!;
 
-        public DbSet<Screen> Screens { get; set; }
+        public DbSet<Screen> Screens { get; set; } = null!;
 
-        public DbSet<Show> Shows { get; set; }
+        public DbSet<Show> Shows { get; set; } = null!;
 
-        public DbSet<Seat> Seats { get; set; }
+        public DbSet<Seat> Seats { get; set; } = null!;
 
-        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Booking> Bookings { get; set; } = null!;
 
-        public DbSet<BookingDetail> BookingDetails { get; set; }
+        public DbSet<BookingDetail> BookingDetails { get; set; } = null!;
     }
 }
