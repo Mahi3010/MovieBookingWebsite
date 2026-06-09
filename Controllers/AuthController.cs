@@ -4,6 +4,7 @@ using MovieBookingAPI.DTOs;
 using MovieBookingAPI.Data;
 using BCrypt.Net;
 using MovieBookingApp.Models;
+using MovieBookingAPI.Helpers;
 namespace MovieBookingAPI.Controllers
 {
     [ApiController]
@@ -12,10 +13,13 @@ namespace MovieBookingAPI.Controllers
     {
         private readonly AppDbContext _context;
 
-        public AuthController(AppDbContext context)
+        private readonly JwtService _jwtService;
+        public AuthController(AppDbContext context,JwtService jwtService)
         {
             _context = context;
+            _jwtService = jwtService;
         }
+
         [HttpPost("register")]
         public IActionResult Register (RegisterDTO registerDTO)
         {
@@ -44,11 +48,39 @@ namespace MovieBookingAPI.Controllers
 
             return Ok("User registered successfully");
         }
+
         [HttpPost("login")]
 
         public IActionResult Login (LoginDTO loginDTO)
         {
-            return Ok("Login API Working");
+            // find user by email
+            var  user = _context.Users
+                .FirstOrDefault(u=>u.Email == loginDTO.Email);
+
+            if(user == null)
+            {
+                return Unauthorized("Invalid Email or Password");
+            }
+
+            //Verify password
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(
+                loginDTO.Password,
+                user.PasswordHash);
+
+            if (!isPasswordValid)
+            {
+                return Unauthorized("Invalid Email or Password");
+            }
+
+            //generate JWT Token
+            string token = _jwtService.GenerateToken(user);
+
+            return Ok( new
+             {
+                Message = "Login Successful",
+                Token = token
+            });
         }
     }
 }
